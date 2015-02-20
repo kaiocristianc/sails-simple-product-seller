@@ -4,31 +4,10 @@
     <div class="col-lg-6">
       <div>
         <div class="btn-group btn-group-justified" role="group" aria-label="...">
-          <createCustomer></createCustomer>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-warning">+ Product</button>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-success">+ Sell</button>
-          </div>
+          <create-menu></create-menu>
         </div>
       </div>
-      <form role="form">
-        <div>
-          <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong>
-          </div>
-          <div class="form-group">
-            <label for="InputName">Enter Customer Name</label>
-
-            <div class="input-group">
-              <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Customer Name"
-                     required>
-              <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-            </div>
-          </div>
-          <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-        </div>
-      </form>
+      <div ng-view></div>
     </div>
     <div class="col-lg-3"></div>
   </div>
