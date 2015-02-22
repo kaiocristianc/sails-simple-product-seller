@@ -1,0 +1,23 @@
+<form role="form" ng-submit="create()" ng-controller="productCreateController">
+  <div>
+    <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong>
+    </div>
+    <div class="form-group">
+      <label for="InputName">Enter Product Name</label>
+      <div class="input-group">
+        <input type="text" ng-model="product.name" class="form-control" name="InputName" id="InputName" placeholder="Product Name"
+               required>
+        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="InputName">Enter Product Price</label>
+      <div class="input-group">
+        <input type="text" ng-model="product.price" class="form-control" name="InputName" id="InputPrice" placeholder="Product Price"
+               required>
+        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+      </div>
+    </div>
+    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+  </div>
+</form>

@@ -1,0 +1,16 @@
+.clickable {
+  cursor: pointer;
+}
+
+.panel-heading div {
+  margin-top: -18px;
+  font-size: 15px;
+}
+
+#table {
+  margin-top: 60px;
+}
+
+.totalButton {
+  padding-right: 0;
+}

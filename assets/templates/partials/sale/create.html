@@ -1,0 +1,72 @@
+<div class="row">
+  <form role="form" ng-init="init()" ng-submit="create()" ng-controller="saleCreateController">
+    <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong>
+    </div>
+    <h3>Cart</h3>
+
+    <div class="form-group">
+      <label for="selectCustomer">Select a Customer</label>
+      <select class="form-control" id="selectCustomer" ng-model="saleItem.customer"
+              ng-options="opt as opt.name for opt in customers"></select>
+    </div>
+
+    <div class="form-group">
+      <label for="selectproduct">Select a product</label>
+      <select class="form-control" id="selectproduct" ng-model="saleItem.product"
+              ng-options="opt as opt.name for opt in products"></select>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4">
+        <label>Amount</label>
+        <number-spinner min="0" max="100" value="1"></number-spinner>
+      </div>
+    </div>
+    <button ng-click="addToCart()" type="button" class="btn pull-right btn-primary">Add to cart</button>
+
+    <div class="row" id="table">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Products in Cart</h3>
+
+            <div class="pull-right">
+							<span class="clickable filter" title="Filter">
+                <i ng-click="toogleFilter()" class="glyphicon glyphicon-filter"></i>
+							</span>
+            </div>
+          </div>
+          <div collapse="hideFilter">
+            <input type="text" class="form-control" ng-model="filterBy" placeholder="Filter items"/>
+          </div>
+          <table class="table table-hover" id="dev-table">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>Product</th>
+              <th>Amount</th>
+              <th>Price</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr
+              ng-repeat="item in saleItems | filter: filterBy track by $index">
+              <td>{{ $index +1 }}</td>
+              <td>{{ item.product.name}}</td>
+              <td>{{ item.amount}}</td>
+              <td>{{ item.product.price}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="form-inline  pull-right">
+      <label for="outputTotal">Total:</label>
+      <input type="text" id="outputTotal" ng-model="totalValue" class="form-control" placeholder="Total" required
+             disabled>
+      <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info">
+    </div>
+  </form>
+</div>
