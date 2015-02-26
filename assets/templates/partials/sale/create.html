@@ -6,7 +6,7 @@
 
     <div class="form-group">
       <label for="selectCustomer">Select a Customer</label>
-      <select class="form-control" id="selectCustomer" ng-model="saleItem.customer"
+      <select class="form-control" id="selectCustomer" ng-model="customer"
               ng-options="opt as opt.name for opt in customers"></select>
     </div>
 
@@ -46,7 +46,6 @@
               <th>Product</th>
               <th>Amount</th>
               <th>Price</th>
-
             </tr>
             </thead>
             <tbody>

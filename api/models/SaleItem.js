@@ -1,5 +1,5 @@
 /**
- * Sale.js
+ * SaleItem.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/#!documentation/models
@@ -8,12 +8,11 @@
 module.exports = {
 
   attributes: {
-    saleItems: {
-      collection: 'SaleItem'
+    product: {
+      model: 'Product'
     },
-    customer: {
-      model: 'customer'
-    }
+    amount: 'integer'
   }
+
 };
 

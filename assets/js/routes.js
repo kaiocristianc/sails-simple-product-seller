@@ -8,6 +8,8 @@
         templateUrl: '/templates/partials/product/create.html'
       }).when('/createSale', {
         templateUrl: '/templates/partials/sale/create.html'
+      }).when('/createSale', {
+        templateUrl: '/templates/partials/sale/create.html'
       })
     }]);
 })();

@@ -7,10 +7,11 @@
 
 module.exports = {
 
-  create: function (req, res) {
-    console.log('requisitou');
-    console.log(req.param('saleItems'));
-  }
+  //create: function (req, res) {
+  //  console.log('requisitou');
+  //  console.log(req.param('saleItems'));
+  //  console.log(req.param('customer'));
+  //}
 
 };
 
